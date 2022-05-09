@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "3b25c0a0-c5da-4697-9f5f-ea22aa2386de",
+		"name": "cards-poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cards.wild-card.consulting/api/deck",
+					"protocol": "https",
+					"host": [
+						"cards",
+						"wild-card",
+						"consulting"
+					],
+					"path": [
+						"api",
+						"deck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cards.wild-card.consulting/api/deck?created-at=1652128417887&user=postman",
+					"protocol": "https",
+					"host": [
+						"cards",
+						"wild-card",
+						"consulting"
+					],
+					"path": [
+						"api",
+						"deck"
+					],
+					"query": [
+						{
+							"key": "created-at",
+							"value": "1652128417887"
+						},
+						{
+							"key": "user",
+							"value": "postman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shuffle Deck",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\": \"postman\",\r\n    \"CreatedAt\": 1652128417887\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cards.wild-card.consulting/api/deck/shuffle",
+					"protocol": "https",
+					"host": [
+						"cards",
+						"wild-card",
+						"consulting"
+					],
+					"path": [
+						"api",
+						"deck",
+						"shuffle"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deal Cards from Deck",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\": \"postman\",\r\n    \"CreatedAt\": 1652128417887,\r\n    \"N\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cards.wild-card.consulting/api/deck/deal",
+					"protocol": "https",
+					"host": [
+						"cards",
+						"wild-card",
+						"consulting"
+					],
+					"path": [
+						"api",
+						"deck",
+						"deal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Deck",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"User\": \"postman\",\r\n    \"CreatedAt\": 1652128417887\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://cards.wild-card.consulting/api/deck",
+					"protocol": "https",
+					"host": [
+						"cards",
+						"wild-card",
+						"consulting"
+					],
+					"path": [
+						"api",
+						"deck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
